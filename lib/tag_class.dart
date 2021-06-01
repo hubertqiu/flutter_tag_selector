@@ -17,7 +17,7 @@ class Tags {
   }
 
   Color getColor() {
-    return tagColor;
+    return isSlected ? tagColor : tagColor.withOpacity(0.3);
   }
 
   IconData getIcon() {
@@ -25,6 +25,5 @@ class Tags {
     return tagIcon;
   }
 
-  Tags(this.tagTitle, this.developerDefinedIcon)
-      : assert(tagTitle != null && developerDefinedIcon != null);
+  Tags(this.tagTitle, this.developerDefinedIcon) : assert(tagTitle != null && developerDefinedIcon != null);
 }
